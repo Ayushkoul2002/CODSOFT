@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+
+    <style>
+        p {
+            margin: 0;
+        }
+
+        .header-bar {
+            display: flex;
+            justify-content: space-evenly;
+            flex: auto;
+            flex-shrink: 0;
+            gap: 20px;
+        }
+
+        .header1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: crimson;
+            flex-shrink: 0;
+            padding-left: 20px;
+            padding-right: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            border-radius: 12px;
+            z-index: 200;
+        }
+
+        .container {
+            display: block;
+            min-width: 700px;
+        }
+
+        .container p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .header-text:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        .header-text {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            cursor: pointer;
+        }
+
+        .ARTIST-IMG {
+            width: 380px;
+            height: 400px;
+            border-radius: 2px;
+           
+            border-radius: 40px;
+            margin-left: 30px;
+            margin-top: 43px;
+            box-shadow: 1px 1px 6px white;
+            transform-style: preserve-3d;
+            cursor: pointer;
+            animation: none;
+            transition: box-shadow 0.25s;
+        }
+
+        .ARTIST-IMG:hover {
+            animation: tiltAnimation 5s infinite alternate ease-in-out;
+            box-shadow: 1px 1px 12px white;
+
+        }
+
+        @keyframes tiltAnimation {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            25% {
+                transform: rotateX(5deg) rotateY(-5deg);
+            }
+            50% {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            75% {
+                transform: rotateX(-5deg) rotateY(5deg);
+            }
+            100% {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+        }
+
+        .book-now-button {
+            background-color: transparent;
+            border-color: #d63031;
+            color: #fff;
+            border-width: 2px;
+            border-style: solid;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+
+        .book-now-button:hover {
+            background-color: #d63031;
+            
+        }
+
+        .booking-info-container {
+            display: flex;
+            align-items: flex-start;
+            padding-left: 05px;
+        }
+
+        .details {
+            display: flex;
+        }
+
+        .logo {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            padding-top: 4px;
+        }
+
+        .booking-details {
+            display: flex;
+            flex-direction: column;
+            margin-left: 60px;
+            border-style: solid;
+            border: none;
+            box-shadow: 0px 0px 5px gray;
+            border-radius: 22px;
+            width: 500px;
+            margin-top: 40px;
+            height: 400px;
+            justify-content: space-evenly;
+            padding-left: 30px;
+            font-size: 22px;
+            flex-shrink: 0;
+            background-color: rgb(37, 37, 35);
+        }
+
+        .reviews-container {
+
+            
+            margin-left: 60px;
+            margin-top: 78px;
+            flex-direction: column;
+            width: 500px;
+            height: 370px; 
+            overflow-y: auto; 
+            background-color:rgb(37, 37, 35);
+            box-shadow: 0px 0px 5px gray;
+            color: white;
+            border-radius: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            flex-shrink: 0;
+            margin-right: 20px;
+            scrollbar-width: thin;
+            scrollbar-color: gray transparent;
+            
+        
+        }
+
+        .reviews-container::-webkit-scrollbar {
+            width: 8px; /* Custom scrollbar width for WebKit browsers */
+            
+        }
+
+        .reviews-container::-webkit-scrollbar-track {
+            background: transparent; /* Custom scrollbar track color for WebKit browsers */
+            margin-top: 70px;
+            margin-bottom: 70px;
+        }
+
+        .reviews-container::-webkit-scrollbar-thumb {
+            background-color: gray; /* Custom scrollbar thumb color for WebKit browsers */
+            border-radius: 10px;
+           
+        }
+
+        .review {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid white;
+            
+        }
+
+      
+
+        .review-name {
+            font-weight: bold;
+            margin-bottom: 2px;
+            font-size: 18px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        
+        }
+
+        .review-time {
+            font-style: italic;
+            color: gray;
+        }
+
+
+        .rev-heading
+        {
+            font-size: 22px;
+            padding-left: 220px;
+            color: #d63031;
+            margin-top: 25px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .rev-div
+        {
+            margin-bottom: 20px;
+            background-color: rgb(37, 37, 35);
+            position:absolute;
+            display: block;
+            z-index: 100;
+            padding-right: 220px;
+            border-top-left-radius: 39px ;
+            border-top-right-radius: 39px;
+            margin-left: -20px;
+            margin-top: -0.3px;
+           
+        
+        }
+
+        .review-content
+        {
+            padding-left: 2px;
+            padding-top: 15px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            margin-bottom:10px ;
+        
+        
+        }
+
+
+        .event-details {
+            display: flex;
+            flex-direction: column;
+            margin-left: 35px;
+            margin-right: 30px;
+            border-style: solid;
+            border: none;
+            box-shadow: 0px 0px 5px gray;
+            border-radius: 22px;
+            width: 360px;
+            height: 390px;
+            margin-left: 60px; 
+            
+            margin-top: 40px;
+            
+            justify-content: space-evenly;
+            padding-left: 30px;
+            font-size: 22px;
+            flex-shrink: 0;
+            background-color: rgb(37, 37, 35);
+        
+        }
+
+
+        .artist-details {
+            display: flex;
+            flex-shrink: 0;
+            flex-direction:row;
+            align-items: center;
+            margin-left: 30px;
+            border-style: solid;
+            border: none;
+            box-shadow: 0px 0px 5px gray;
+            border-radius: 22px;
+            width: 805px;
+            margin-top: 80px;
+            height: 390px;
+            justify-content: space-evenly;
+            padding-left: 30px;
+            font-size: 22px;
+            flex-shrink: 0;
+            background-color: rgb(37, 37, 35);
+        
+        
+        }
+
+        .releases
+        {
+            margin-bottom: 3px;
+            font-family: 'Cutive Mono', monospace;
+            color: rgb(139, 136, 136);
+        }
+
+        .artist-name-span
+        {
+            color:#d63031;
+            font-family: 'Cutive Mono', monospace;
+            font-size: 28PX;
+        }
+        
+
+
+        .social
+        {
+            
+            font-size: 15px;
+            margin-top: 30px;
+        }
+
+        .SOCIAL
+        {
+
+            margin-top: 15px;
+           
+        }
+
+        .logo1 {
+            width: 25px;
+            height: 25px;
+            margin-right: 25px;
+            padding-top: 4px;
+            
+        }
+
+        .album-cover
+        {
+            width: 200px;
+            box-shadow: 1px 1px 6px white;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.15s;
+
+        }
+
+
+        .album-cover:hover
+        {
+
+            box-shadow: 1px 1px 12px white;
+
+        }
+
+
+
+        .developer-container
+        {
+            width: 500px;
+            height: 400px;
+            background-color: rgb(37, 37, 35);
+            padding: 20px;
+            padding-right: 40px;
+            border-radius: 40px;
+            box-shadow: 0px 0px 5px gray;
+            flex-shrink: 0;
+            margin-left: 30px;
+        }
+
+        
+        .contact-developer-container {
+            display: flex;
+            
+            flex-shrink: 0;
+            margin-top: 50px;
+           
+
+        }
+
+        .contact-us-container {
+            width: 500px;
+            height: 400px;
+            background-color: rgb(37, 37, 35);
+            padding: 20px;
+            padding-right: 40px;
+            border-radius: 40px;
+            box-shadow: 0px 0px 5px gray;
+            flex-shrink: 0;
+            margin-left: 30px;
+            margin-right: 20px;
+            
+        }
+
+        .contact-us-container h2,
+        .developer-container h3 {
+            color: #d63031;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        .contact-form button {
+            background-color: rgb(37, 37, 35);
+            border-color:#d63031;
+            border-style: solid;
+            color: white;
+           border-width: 2px;
+            width: 520px;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: inherit;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color:#d63031;
+        }
+
+        .developer-container {
+           
+            margin-right: 40px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 30px;
+           justify-content:space-evenly;
+            margin-top: 50px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+      
+
+
+        .social-image
+        {
+            width: 40px;
+            margin-left: 18px;
+        }
+
+
+        .QUOTE
+        {
+            margin-top: 170px;
+            margin-bottom: 150px;
+            display: flex;
+            justify-content: center;
+            font-style: italic;
+            opacity: 0.6;
+            font-family: 'Cookie', cursive;
+        }
+
+
+
+
+
+        .loader {
+            margin: auto;
+            width: 100px;
+            height: 30px;
+            flex-shrink: 0;
+            overflow: hidden;
+            position: relative;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            box-shadow: 0px 35px 0 -5px #aaa, 0 -5px 0 0px #ddd, 0 -25px 0 -5px #fff,
+              -25px -30px 0 0px #ddd, -25px 30px 0 0px #ddd, 25px -30px 0 0px #ddd,
+              25px 30px 0 0px #ddd, 20px 10px 0 5px #ddd, 20px -10px 0 5px #ddd,
+              -20px -10px 0 5px #ddd, -20px 10px 0 5px #ddd;
+          }
+          
+          .loader:after,
+          .loader:before {
+            content: "";
+            border-radius: 100%;
+            width: 35px;
+            height: 35px;
+            display: block;
+            position: absolute;
+            border: 4px dashed #fff;
+            bottom: -4px;
+            transform: rotate(0deg);
+            box-sizing: border-box;
+            animation: tape 4s linear infinite;
+          }
+          
+          .loader:before {
+            right: 0;
+            box-shadow: 0 0 0 4px #fff, 0 0 0 34px #000;
+          }
+          
+          .loader:after {
+            left: 0;
+            box-shadow: 0 0 0 4px #fff, 0 0 0 65px #000;
+          }
+          
+          @keyframes tape {
+            0% {
+              transform: rotate(0deg) scale(0.4);
+            }
+          
+            100% {
+              transform: rotate(-360deg) scale(0.4);
+            }
+          }
+                
+      
+
+          .final-text
+          {
+                opacity: 0.7;
+                font-size: 20px;
+                font-family: 'Cutive Mono', monospace;
+                
+          }
+
+          .final-div
+          {
+            margin-left: 40px;
+            margin-right: 40px;
+          }
+
+          .follow-icons
+          {
+            display: flex;
+            margin-top: 100px;
+            gap: 50px;
+            justify-content: center;
+          }
+          
+
+    </style>
+</head>
+
+<body style="background-color: rgb(28, 25, 25); color: white; padding-bottom:40px; padding-top:70px">
+    <div class="header1">
+        <div class="container">
+            <p>RAP WRLD</p>
+        </div>
+
+        <div class="header-bar">
+            <p class="header-text">ARTISTS</p>
+            <p class="header-text">TRENDING</p>
+            <p class="header-text">BOOKED-TICKETS</p>
+            <p class="header-text">SHOWS</p>
+        </div>
+    </div>
+
+    <div class="booking-info-container">
+        <div>
+            <img class="ARTIST-IMG" src="IMAGES\BELLAIMAGE.jpg">
+        </div>
+        <div class="booking-details">
+            <div class="details">
+                <p style="margin-left: 146px; color:#d63031">ARTIST - BELLA</p>
+            </div>
+            <div class="details">
+                <img class="logo" src="IMAGES\BOOKMARK.png">
+                <p>Music Concerts</p>
+            </div>
+            <div class="details">
+                <img class="logo" src="IMAGES\CALANDER.png">
+                <p>JULY 26 | 7:30PM - JULY 28 | 1:00AM</p>
+            </div>
+
+            <div class="details">
+                <img class="logo" src="IMAGES\LOCATION.png">
+                <p>The Millers Homebar & Kitchen, Pune</p>
+            </div>
+            <div>
+                <p>&#8377 399 onwards</p>
+                <button class="book-now-button">BOOK NOW</button>
+            </div>
+        </div>
+
+        <div class="event-details">
+            <div class="details">
+                <p style="margin-left: 90px; color:#d63031">EVENT GUIDE</p>
+            </div>
+            <div class="details">
+                <img class="logo" src="IMAGES\16PLUS.png">
+                <p>16+ AGE</p>
+            </div>
+            <div class="details">
+                <img class="logo" src="IMAGES\LANG.png">
+                <p>HINDI , ENGLISH</p>
+            </div>
+
+            <div class="details">
+                <img class="logo" src="IMAGES\nosmoking.png">
+                <p>NO SMOKING</p>
+            </div>
+
+            <div class="details">
+                <img class="logo" src="IMAGES\nodrink.png">
+                <p>NO ALCOHOL</p>
+            </div>
+
+           
+            
+        </div>
+
+       
+    </div>
+
+
+     <div style="display: flex; margin-top:-20px">
+
+
+      
+
+
+        <div class="artist-details">
+
+            <div style="margin-top:40px ;">
+                <div class="details">
+                    <p style="margin-left: 260px; color:#d63031; margin-top:-30px">ABOUT ARTIST</p>
+                </div>
+
+                <div style="padding-top: 30px;">
+                <div class="details">
+                    
+                    <p>NAME - <span class="artist-name-span">BELLA</span> </p>
+                </div>
+                <div class="details">
+                   
+                    <p style="font-size: 15px; margin-top:10px; margin-bottom:40px;">POPULAR RELEASES</p>
+                </div>
+    
+                <div style="margin-top:-14px;">
+                    
+                    <p class="releases">Chemical Reaction</p>
+                    <p class="releases">Glory Of God</p>
+                    <p class="releases">God Made Me The Greatest</p>
+                    <p class="releases">Home - The Album</p>
+    
+                   
+                </div>
+    
+                <div>
+                    
+                    <p class="social">SOCIALS</p>
+    
+                    <div class="SOCIAL">
+    
+    
+                        <a href="https://open.spotify.com/artist/5gzMmZ8RKovEfs38ca7hkG?si=KDHNVBuCSQOFNO_u7hvJUQ" target="_blank"><img class="logo1" src="IMAGES\spotify.png"></a>
+                        <a href="https://youtube.com/@BellaOfficials" target="_blank"><img class="logo1" src="IMAGES\youtube.png"></a>
+                        <a href="https://instagram.com/bellaofficials?igshid=MzRlODBiNWFlZA==" target="_blank"><img class="logo1" src="IMAGES\instagram.png"></a>
+                        
+    
+                    </div>
+    
+                </div>
+            </div>
+
+            </div>
+
+            <div style="padding-right: 40px;">
+
+                <img class="album-cover" src="IMAGES\ALBUM.jpg">
+
+
+            </div>
+
+
+            
+           
+
+
+        </div>
+
+
+        <div class="reviews-container">
+
+            <div style="background-color: rgb(37, 37, 35) ;">
+
+            <div class="rev-div">
+
+                <p class="rev-heading">REVIEWS</p>
+
+            </div>
+        </div>
+            <div style="display: flex; flex-direction:column; position:relative; margin-top:90px">
+
+                <div class="review">
+                    <p class="review-name">Ayush Koul</p>
+                    <p class="review-time">2 days ago</p>
+                    <p class="review-content">Bella is more than just a rapper, he's a musical healer who mends hearts and souls with his extraordinary talent.Thank you, Bella, for being the musical remedy we all need! 🎵💫"</p>
+                </div>
+                <div class="review">
+                    <p class="review-name">Byg Smyle</p>
+                    <p class="review-time">4 days ago</p>
+                    <p class="review-content">Bella's music has become the soundtrack of my life, and I wouldn't miss the chance to see him live! ❤️💎</p>
+                </div>
+                <div class="review">
+                    <p class="review-name">Kalam ink</p>
+                    <p class="review-time">1 week ago</p>
+                    <p class="review-content">Counting down the days until I witness Bella's extraordinary talent live on stage.🔥🔥 It's going to be epic! </p>
+                </div>
+                <div class="review">
+                    <p class="review-name">MC INSANE</p>
+                    <p class="review-time">1 week ago</p>
+                    <p class="review-content">Bella's music has the power to heal hearts and uplift souls. Count me in for a transformative experience at his concert! 🌟🎵</p>
+                </div>
+                <div class="review">
+                    <p class="review-name">SARKAAR</p>
+                    <p class="review-time">1 week ago</p>
+                    <p class="review-content">Bella ke gaano se dil ko sukoon milta hai aur rooh ko shanti. concert mein aakar uski aawaz ka nasha karunga! 🎶💆</p>
+                </div>
+
+            </div>
+           
+        </div>
+
+
+        </div>
+
+
+
+
+        <div class="QUOTE"><p>" BELLA TU HI BACHA PAAYEGA "</p></div>
+
+
+
+
+
+        <div class="contact-developer-container">
+
+
+            <div class="contact-us-container">
+                <h2 style="margin-left: 200px;">Contact Us</h2>
+                <div class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name">
+                    <input type="text" name="email" placeholder="Your Email">
+                    <textarea name="message" placeholder="Your Message" rows="5" cols="50"></textarea>
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+
+
+<div class="loader"></div>
+
+
+            
+
+
+    
+            <div class="developer-container">
+                <h3 style="margin-left: 120px;">Connect with Ayush Koul</h3>
+
+                
+
+
+                <div class="social-links">
+
+                </div>
+                <div class="final-div"> <p class="final-text">Hey there, I'm Ayush Koul, a passionate developer and a fan of rap music.I've Combined my Love for Web Development and Rap Music to Create this Project.</p>
+
+
+               
+<div class="follow-icons">
+
+                    <a href="https://instagram.com/ayushkoul2002?igshid=NGExMmI2YTkyZg==" target="_blank">
+                        <img class="social-image" src="IMAGES\instagram.png">
+
+
+                    </a>
+
+
+                    <a href="https://www.youtube.com/@Ayushkoul" target="_blank">
+                        <img class="social-image" src="IMAGES\youtube.png">
+                    </a>
+
+
+                    <a href="https://www.linkedin.com/in/ayush-koul-556a97256" target="_blank">
+                        <img class="social-image" src="IMAGES\linkedin.png">
+                    </a>
+
+
+                    <a href="https://github.com/Ayushkoul2002" target="_blank">
+                        <img class="social-image" src="IMAGES\github1.png">
+                    </a>
+
+                </div>
+                </div>
+                  
+                
+            </div>
+        </div>
+
+
+
+
+    
+
+  
+
+</body>
+</html>
