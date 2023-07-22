@@ -43,6 +43,9 @@
         .container {
             display: block;
             min-width: 700px;
+            margin-left: auto;
+            margin-right: 40px;
+           
         }
 
         .container p {
@@ -126,7 +129,9 @@
         .booking-info-container {
             display: flex;
             align-items: flex-start;
-            padding-left: 05px;
+            padding-left: 5px;
+            
+    
         }
 
         .details {
@@ -277,6 +282,7 @@
             
             justify-content: space-evenly;
             padding-left: 30px;
+       
             font-size: 22px;
             flex-shrink: 0;
             background-color: rgb(37, 37, 35);
@@ -378,11 +384,12 @@
         }
 
         
-        .contact-developer-container {
+        .contact-developer-container
+         {
             display: flex;
-            
             flex-shrink: 0;
             margin-top: 50px;
+
            
 
         }
@@ -480,8 +487,9 @@
         {
             margin-top: 170px;
             margin-bottom: 150px;
-            display: flex;
-            justify-content: center;
+            margin-left: 670px;
+            width: 150px;
+        
             font-style: italic;
             opacity: 0.6;
             font-family: 'Cookie', cursive;
@@ -504,6 +512,13 @@
               -25px -30px 0 0px #ddd, -25px 30px 0 0px #ddd, 25px -30px 0 0px #ddd,
               25px 30px 0 0px #ddd, 20px 10px 0 5px #ddd, 20px -10px 0 5px #ddd,
               -20px -10px 0 5px #ddd, -20px 10px 0 5px #ddd;
+          }
+
+          .loader-class
+          {
+            margin-top: 200px;
+            margin-left: 82px;
+            margin-right: 80px;
           }
           
           .loader:after,
@@ -569,12 +584,14 @@
     </style>
 </head>
 
-<body style="background-color: rgb(28, 25, 25); color: white; padding-bottom:40px; padding-top:70px">
+<body style="background-color: rgb(28, 25, 25); color: white; padding-bottom:40px; padding-top:70px;" >
     <div class="header1">
         <div class="container">
             <p>RAP WRLD</p>
         </div>
 
+
+    
         <div class="header-bar">
             <p class="header-text">ARTISTS</p>
             <p class="header-text">TRENDING</p>
@@ -641,7 +658,7 @@
     </div>
 
 
-     <div style="display: flex; margin-top:-20px">
+     <div style="display: flex; margin-top:-20px;">
 
 
       
@@ -776,7 +793,9 @@
             </div>
 
 
-<div class="loader"></div>
+
+
+            <div class="loader-class"><div class="loader" ></div></div>
 
 
             
@@ -791,12 +810,12 @@
 
                 <div class="social-links">
 
-                </div>
+                
                 <div class="final-div"> <p class="final-text">Hey there, I'm Ayush Koul, a passionate developer and a fan of rap music.I've Combined my Love for Web Development and Rap Music to Create this Project.</p>
 
 
                
-<div class="follow-icons">
+                <div class="follow-icons">
 
                     <a href="https://instagram.com/ayushkoul2002?igshid=NGExMmI2YTkyZg==" target="_blank">
                         <img class="social-image" src="IMAGES\instagram.png">
@@ -825,11 +844,7 @@
                 
             </div>
         </div>
-
-
-
-
-    
+        </div>
 
   
 
