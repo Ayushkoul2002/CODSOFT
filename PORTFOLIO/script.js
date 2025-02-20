@@ -71,14 +71,14 @@ ScrollReveal().reveal('.home-content h1, .about-img',{ origin:'left' });
 ScrollReveal().reveal('.home-content p, .about-content',{ origin:'left' });
 
 
-const typed=new Typed('.multiple-text',{
-    strings:['Web Developer','Frontend Developer','Backend Developer','Youtuber','Coder' ],
-    typeSpeed:100,
-    backSpped:100,
-    backDelay:1000,
-    loop:true
-
+const typed = new Typed('.multiple-text', {
+    strings: ['Full Stack Developer', 'DevOps Engineer', 'Cloud Enthusiast', 'Coder'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
 });
+
 
 const form = document.getElementById('contact-form');
 
